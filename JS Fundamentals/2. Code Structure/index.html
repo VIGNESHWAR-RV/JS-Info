@@ -18,13 +18,17 @@
         1
         + 2);
 
+    // ---------------------------------------------------------------------
+
         // 🚫 there are situations where JS fails to put auto semicolon
         alert("hello Javascript !!!")
 
         [1,2].forEach(alert);
 
         // since there is no semicolon, it is interpreted as
-        // alert("hello Javascript !!!")[1,2].forEach(alert); ☠️
+        // alert("hello Javascript !!!")[1,2].forEach(alert); ☠️!!!
+
+    // ---------------------------------------------------------------------
 
         // this can be fixed by adding semi-colon after alert;        
         alert("hello Javascript !!!");

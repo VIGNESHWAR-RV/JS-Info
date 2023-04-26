@@ -37,3 +37,38 @@
    At worst, it results in NaN ( sometimes might be difficult to debug )
    
 */
+
+/*
+   
+  BigInt - recently added in JS ( ES2020 )
+  ------
+
+  JS cannot safely represent ( without precision error ) 
+    for numbers > ( 2^53 - 1 ) &&  numbers < -(2^53 - 1)  // 2^53-1 = 9007199254740991
+
+  but number type can actually store upto  ( 1.7976931348623157 * 10^308 )
+    but outside safe integer range ( 2^53 - 1 ) , there will be precision error 
+    as all digits would not fit into 64-bit storage. 
+    so approximate value is stored.
+  
+  ex: 
+    9007199254740991 + 1 = 9007199254740992
+    9007199254740991 + 2 = 9007199254740992
+
+   so all numbers > ( 2^53 - 1 ) cannot be stored at all in number type
+
+   There are usecases of such big numbers in some areas
+   e.g. 
+      cryptography 
+      microsecond-precision timestamps
+
+   BigInt was introduced to represent numbers of arbitrary length.
+
+   bigint value is created by adding "n" at the end of number
+   eg: 
+     let num1 = 9007199254740993n;
+     let num2 = 6n;
+
+   bigint is not supported in IE
+
+*/

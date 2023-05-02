@@ -72,3 +72,31 @@
    bigint is not supported in IE
 
 */
+
+/*
+ 
+  String
+  ------
+
+  -> surrounded by quotes( "", '', `` )
+
+  -> single ('') and double ("") quotes are simple quotes and practically have no difference.
+     it dont support embedding functionality
+
+  -> backtics are extended functionality quotes.
+      it enables to insert variables and expressions inside string by wrapping with ${}
+      the expression is evaluated and result becomes part of the string.
+
+  ex: 
+    var RV = "Vigneshwar RV"
+    alert('Hi' + RV);
+    alert("Hi" + RV);
+    alert(`Hi ${RV}`);
+
+   Note⚠️
+   ------
+      There is no char type in JS.
+      there are special character type for single character in Java and C , called "char"
+      JS has only string type ( string ) and it may consist of zero (or) one (or) many characters.    
+
+*/ 
